@@ -1,0 +1,106 @@
+# --- gestoresgranada.com — RENDIMIENTO, SEO Y SEGURIDAD ---
+RewriteEngine On
+
+# 0) MIGRACIÓN JOOMLA -> ESTÁTICO (sep-2026) — va PRIMERO y con destino
+#    absoluto en www, para que cada URL antigua llegue en UN solo salto 301.
+#    *** MANTENER de forma permanente. ***
+# a) Cualquier /index.php (con o sin parámetros de SP Page Builder) -> portada
+RewriteRule ^index\.php$ https://www.gestoresgranada.com/? [R=301,L]
+# b) Páginas con equivalente nuevo (mismo servicio, ahora de Felisa): 301
+RewriteRule ^es/?$                 https://www.gestoresgranada.com/                              [R=301,L]
+RewriteRule ^es/fiscal/?$          https://www.gestoresgranada.com/asesoria-fiscal-granada.html  [R=301,L]
+RewriteRule ^es/laboral/?$         https://www.gestoresgranada.com/asesoria-laboral-granada.html [R=301,L]
+# c) Contenido del antiguo despacho (sobre nosotros, herencias, contratos,
+#    alquileres, registro, Junta de Andalucía) y blog: 410 Gone.
+#    No tiene equivalente en esta web y no debe trasladar señales del
+#    despacho de abogados a la gestoría de Felisa.
+RewriteRule ^es/ - [G,L]
+
+# 1) Anti-duplicidad Home (/index.html -> /)
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.gestoresgranada.com/ [R=301,L]
+
+# 2) Canonización de HOST: sin www -> www (regla independiente).
+#    Antes iba unida a la de HTTPS y, detrás del proxy del hosting
+#    (X-Forwarded-Proto: https), la condición nunca se cumplía.
+RewriteCond %{HTTP_HOST} !^www\.gestoresgranada\.com$ [NC]
+RewriteRule ^ https://www.gestoresgranada.com%{REQUEST_URI} [R=301,L]
+
+# 3) Canonización de PROTOCOLO: http -> https
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+RewriteRule ^ https://www.gestoresgranada.com%{REQUEST_URI} [R=301,L]
+
+# --- ENDURECIMIENTO / SEGURIDAD DE ARCHIVOS ---
+Options -Indexes
+AddDefaultCharset utf-8
+
+<FilesMatch "(^\.ht|\.(bak|old|orig|save|swp|log|sql|ini)$|~$)">
+    Require all denied
+</FilesMatch>
+
+# --- SEGURIDAD (Cabeceras HTTP) ---
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), payment=(), usb=()"
+</IfModule>
+
+# --- MIME TYPES ---
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+    AddType image/x-icon .ico
+    AddType text/plain .txt
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+</IfModule>
+
+# --- COMPRESIÓN — Brotli primero, Gzip de fallback ---
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css
+    AddOutputFilterByType BROTLI_COMPRESS text/javascript application/javascript application/json
+    AddOutputFilterByType BROTLI_COMPRESS application/xml image/svg+xml image/x-icon
+</IfModule>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/json
+    AddOutputFilterByType DEFLATE application/xml image/svg+xml image/x-icon
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|html|woff2|woff)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+# --- CACHÉ DE NAVEGADOR ---
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp    "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/png     "access plus 1 year"
+    ExpiresByType image/jpeg    "access plus 1 year"
+    ExpiresByType image/x-icon  "access plus 1 year"
+    ExpiresByType text/css               "access plus 6 months"
+    ExpiresByType application/javascript "access plus 6 months"
+    ExpiresByType font/woff2    "access plus 1 year"
+    ExpiresByType font/woff     "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=15552000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(woff2|woff)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>

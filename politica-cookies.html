@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) · GA4 G-LKCRJRYJZS · Consent Mode v2 (modo básico):
+     Google Analytics solo se carga si el visitante acepta las cookies de analítica
+     (art. 22.2 LSSI). Sin consentimiento no se descarga nada de Google. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  window.cargarGA = function () {
+    if (window.gaCargado) return;
+    window.gaCargado = true;
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LKCRJRYJZS';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-LKCRJRYJZS');
+  };
+  try {
+    var c = (localStorage.getItem('cookies_analitica') || '').split('|');
+    if (c[0] === 'si' && Date.now() - Number(c[1]) < 63072000000) window.cargarGA();
+  } catch (e) {}
+</script>
+<title>Política de cookies | Felisa Herrera Talavera · Asesoría en Granada</title>
+<meta name="description" content="Cookies de www.gestoresgranada.com: solo analítica de Google Analytics y únicamente si la aceptas. Cómo aceptar, rechazar o retirar tu consentimiento.">
+<meta name="author" content="Felisa Herrera Talavera">
+<link rel="canonical" href="https://www.gestoresgranada.com/politica-cookies.html">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Nunito/nunito-v26-latin-regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Nunito/nunito-v26-latin-700.woff2" crossorigin>
+<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/style.css?v=1.1">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0e4239">
+<meta property="og:title" content="Política de cookies | Felisa Herrera Talavera · Asesoría en Granada">
+<meta property="og:description" content="Cookies de www.gestoresgranada.com: solo analítica de Google Analytics y únicamente si la aceptas. Cómo aceptar, rechazar o retirar tu consentimiento.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://www.gestoresgranada.com/politica-cookies.html">
+<meta property="og:site_name" content="Felisa Herrera Talavera · Asesoría de Autónomos en Granada">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://www.gestoresgranada.com/assets/img/og-felisa-herrera-asesoria-granada.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="Felisa Herrera Talavera, asesoría y gestoría de autónomos en Granada">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "@id": "https://www.gestoresgranada.com/#asesoria",
+      "name": "Felisa Herrera Talavera",
+      "alternateName": [
+        "Asesoría Felisa Herrera Talavera",
+        "Gestores Granada"
+      ],
+      "slogan": "Asesoría y gestoría fiscal, contable y laboral solo para autónomos, en el Zaidín (Granada)",
+      "description": "Gestoría y asesoría fiscal, contable y laboral para autónomos en Granada (barrio del Zaidín), en ejercicio desde 2006: IVA e IRPF trimestral (modelos 303, 130 y 131), retenciones (111 y 115), declaración de la Renta, libros registro, alta de autónomo y RETA, Cuota Cero y Tarifa Plana, y nóminas y seguros sociales de sus trabajadores. Atención presencial en el Zaidín y online en toda la provincia, con cuota mensual cerrada.",
+      "url": "https://www.gestoresgranada.com/",
+      "image": [
+        "https://www.gestoresgranada.com/assets/img/og-felisa-herrera-asesoria-granada.webp",
+        "https://www.gestoresgranada.com/assets/img/asesoria-empresas-granada-zaidin.webp",
+        "https://www.gestoresgranada.com/assets/img/retrato-felisa-herrera-asesoria-granada.webp"
+      ],
+      "telephone": "+34 633 166 777",
+      "email": "felisahtalavera@gmail.com",
+      "legalName": "Felisa Herrera Talavera",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.gestoresgranada.com/assets/img/logo-felisa-herrera-asesoria-autonomos-granada.png",
+        "contentUrl": "https://www.gestoresgranada.com/assets/img/logo-felisa-herrera-asesoria-autonomos-granada.png",
+        "width": 512,
+        "height": 512
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "name": "Pedir cita en la asesoría",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.gestoresgranada.com/contacto.html",
+          "actionPlatform": [
+            "https://schema.org/DesktopWebPlatform",
+            "https://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Cita con Felisa Herrera Talavera — Zaidín, Granada"
+        }
+      },
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "foundingDate": "2006",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Torre de Machuca, 4, Bajo 1",
+        "addressLocality": "Granada",
+        "addressRegion": "Andalucía",
+        "postalCode": "18007",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.15545880182846,
+        "longitude": -3.59479047738148
+      },
+      "containedInPlace": {
+        "@type": "Place",
+        "name": "Zaidín, Granada"
+      },
+      "hasMap": "https://www.google.com/maps?q=Calle+Torre+de+Machuca,+4,+Bajo+1,+18007+Granada",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+34 633 166 777",
+        "email": "felisahtalavera@gmail.com",
+        "availableLanguage": "es",
+        "areaServed": "ES",
+        "hoursAvailable": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "15:00"
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Zaidín-Vergeles, Granada"
+        },
+        {
+          "@type": "Place",
+          "name": "Parque Tecnológico de la Salud (PTS), Granada"
+        },
+        {
+          "@type": "City",
+          "name": "Granada",
+          "sameAs": "https://www.wikidata.org/wiki/Q8810"
+        },
+        {
+          "@type": "City",
+          "name": "Armilla"
+        },
+        {
+          "@type": "City",
+          "name": "La Zubia"
+        },
+        {
+          "@type": "City",
+          "name": "Ogíjares"
+        },
+        {
+          "@type": "City",
+          "name": "Churriana de la Vega"
+        },
+        {
+          "@type": "City",
+          "name": "Huétor Vega"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Provincia de Granada"
+        }
+      ],
+      "knowsLanguage": "es",
+      "knowsAbout": [
+        "Asesoría y gestoría fiscal de autónomos",
+        "IVA trimestral (modelo 303) y resumen anual (modelo 390)",
+        "Pagos fraccionados de IRPF en estimación directa (modelo 130) y módulos (modelo 131)",
+        "Retenciones de trabajadores, profesionales y alquileres (modelos 111, 115, 190 y 180)",
+        "Facturación electrónica y sistema Verifactu para autónomos",
+        "Declaración de la Renta con actividad económica (modelo 100)",
+        "Libros registro obligatorios de IRPF e IVA (ventas, gastos y bienes de inversión)",
+        "RETA, Tarifa Plana y Cuota Cero de la Junta de Andalucía",
+        "Cotización de autónomos por ingresos reales",
+        "Nóminas, contratos y seguros sociales (Sistema RED / Siltra) de trabajadores contratados por autónomos",
+        "Declaración de la Renta de autónomos",
+        "Alta de autónomos en Hacienda y en la Seguridad Social",
+        "Ayudas y subvenciones para autónomos en Andalucía"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de gestoría y asesoría para autónomos en el Zaidín, Granada",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.gestoresgranada.com/asesoria-fiscal-granada.html#servicio",
+              "name": "Asesoría y gestoría fiscal para autónomos en Granada",
+              "url": "https://www.gestoresgranada.com/asesoria-fiscal-granada.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.gestoresgranada.com/asesoria-contable-granada.html#servicio",
+              "name": "Asesoría contable para autónomos en Granada",
+              "url": "https://www.gestoresgranada.com/asesoria-contable-granada.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.gestoresgranada.com/asesoria-laboral-granada.html#servicio",
+              "name": "Asesoría laboral para autónomos y sus trabajadores en Granada",
+              "url": "https://www.gestoresgranada.com/asesoria-laboral-granada.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Declaración de la Renta de autónomos en Granada",
+              "url": "https://www.gestoresgranada.com/asesoria-fiscal-granada.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Alta de autónomo en Hacienda y en la Seguridad Social",
+              "url": "https://www.gestoresgranada.com/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tramitación de ayudas para autónomos: Cuota Cero y Tarifa Plana",
+              "url": "https://www.gestoresgranada.com/asesoria-laboral-granada.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gestoría online para autónomos de la provincia de Granada",
+              "url": "https://www.gestoresgranada.com/contacto.html"
+            }
+          }
+        ]
+      },
+      "founder": {
+        "@id": "https://www.gestoresgranada.com/#felisa"
+      },
+      "employee": {
+        "@id": "https://www.gestoresgranada.com/#felisa"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.gestoresgranada.com/#felisa",
+      "name": "Felisa Herrera Talavera",
+      "givenName": "Felisa",
+      "familyName": "Herrera Talavera",
+      "url": "https://www.gestoresgranada.com/",
+      "jobTitle": "Asesora fiscal, contable y laboral de autónomos",
+      "description": "Licenciada en Relaciones Laborales por la Universidad de Granada y asesora en ejercicio desde 2006 en el barrio del Zaidín (Granada), dedicada en exclusiva a trabajadores autónomos y sus empleados.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.gestoresgranada.com/assets/img/retrato-felisa-herrera-asesoria-granada.webp",
+        "contentUrl": "https://www.gestoresgranada.com/assets/img/retrato-felisa-herrera-asesoria-granada.webp",
+        "width": 800,
+        "height": 1000,
+        "caption": "Felisa Herrera Talavera"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad de Granada",
+        "url": "https://www.ugr.es/"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licenciatura en Relaciones Laborales (2007)",
+          "credentialCategory": "degree",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad de Granada",
+            "url": "https://www.ugr.es/"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Máster Fiscal para Profesionales (2015)",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Centro de Estudios Jurídicos de Granada"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Máster en Recursos Humanos (2010)",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Escuela de Negocios de Andalucía"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Experto Fiscal (2009)",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Academia LANT"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Fiscalidad de autónomos",
+        "Libros registro de IRPF e IVA",
+        "Relaciones laborales y Seguridad Social (RETA)"
+      ],
+      "knowsLanguage": "es",
+      "telephone": "+34 633 166 777",
+      "email": "felisahtalavera@gmail.com",
+      "worksFor": {
+        "@id": "https://www.gestoresgranada.com/#asesoria"
+      },
+      "workLocation": {
+        "@id": "https://www.gestoresgranada.com/#asesoria"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Granada",
+          "sameAs": "https://www.wikidata.org/wiki/Q8810"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Provincia de Granada"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.gestoresgranada.com/#web",
+      "url": "https://www.gestoresgranada.com/",
+      "name": "Felisa Herrera Talavera",
+      "alternateName": [
+        "Gestores Granada",
+        "gestoresgranada.com"
+      ],
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.gestoresgranada.com/#asesoria"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.gestoresgranada.com/politica-cookies.html#webpage",
+      "url": "https://www.gestoresgranada.com/politica-cookies.html",
+      "name": "Política de cookies | Felisa Herrera Talavera · Asesoría en Granada",
+      "description": "Cookies de www.gestoresgranada.com: solo analítica de Google Analytics y únicamente si la aceptas. Cómo aceptar, rechazar o retirar tu consentimiento.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://www.gestoresgranada.com/#web"
+      },
+      "about": {
+        "@id": "https://www.gestoresgranada.com/#asesoria"
+      },
+      "datePublished": "2026-09-28",
+      "dateModified": "2026-11-01",
+      "lastReviewed": "2026-11-01",
+      "author": {
+        "@id": "https://www.gestoresgranada.com/#felisa"
+      },
+      "reviewedBy": {
+        "@id": "https://www.gestoresgranada.com/#felisa"
+      },
+      "breadcrumb": {
+        "@id": "https://www.gestoresgranada.com/politica-cookies.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.gestoresgranada.com/politica-cookies.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.gestoresgranada.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Política de cookies",
+          "item": "https://www.gestoresgranada.com/politica-cookies.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="/" aria-label="Felisa Herrera Talavera, inicio">
+      <span class="marca__sello" aria-hidden="true">FH</span>
+      <span class="marca__nombre">Felisa Herrera Talavera<small>Asesoría de autónomos · Granada</small></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/">Inicio</a>
+      <a href="/asesoria-fiscal-granada.html">Fiscal</a>
+      <a href="/asesoria-contable-granada.html">Contable</a>
+      <a href="/asesoria-laboral-granada.html">Laboral</a>
+      <a href="/contacto.html">Contacto</a>
+      <a class="boton boton--wa" href="https://wa.me/34633166777?text=Hola%20Felisa%2C%20busco%20asesor%C3%ADa%20para%20mi%20negocio%20en%20Granada%20y%20querr%C3%ADa%20informaci%C3%B3n." rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="hamburguesa" id="hamburgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="menu-movil" id="mobileMenu" hidden aria-label="Menú móvil">
+    <button class="menu-movil__cerrar" id="closeMenuBtn" aria-label="Cerrar menú">×</button>
+    <a href="/">Inicio</a>
+    <a href="/asesoria-fiscal-granada.html">Asesoría fiscal</a>
+    <a href="/asesoria-contable-granada.html">Asesoría contable</a>
+    <a href="/asesoria-laboral-granada.html">Asesoría laboral</a>
+    <a href="/contacto.html">Contacto</a>
+    <a class="boton boton--wa" href="https://wa.me/34633166777?text=Hola%20Felisa%2C%20busco%20asesor%C3%ADa%20para%20mi%20negocio%20en%20Granada%20y%20querr%C3%ADa%20informaci%C3%B3n." rel="noopener">Escribir por WhatsApp</a>
+  </nav>
+</header>
+<main id="contenido">
+<section class="seccion legal">
+  <div class="contenedor">
+    <h1>Política de cookies</h1>
+    <p>En cumplimiento del artículo 22.2 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), te informamos de las cookies que utiliza www.gestoresgranada.com. Esta web usa el mínimo imprescindible: <strong>solo cookies de analítica de Google Analytics, y únicamente si las aceptas</strong> en el aviso que aparece al entrar. Si las rechazas o no eliges, no se carga nada de Google Analytics.</p>
+    <h2>Qué cookies se utilizan</h2>
+    <div class="tabla-legal">
+    <table>
+      <thead><tr><th>Nombre</th><th>Titular</th><th>Finalidad</th><th>Duración</th><th>Consentimiento</th></tr></thead>
+      <tbody>
+        <tr><td>_ga</td><td>Google (Google Analytics)</td><td>Distinguir de forma seudónima a cada visitante para contar visitas.</td><td>2 años</td><td>Sí, solo si aceptas</td></tr>
+        <tr><td>_ga_LKCRJRYJZS</td><td>Google (Google Analytics)</td><td>Mantener el estado de la sesión de analítica.</td><td>2 años</td><td>Sí, solo si aceptas</td></tr>
+        <tr><td>cookies_analitica <small>(almacenamiento local del navegador)</small></td><td>Esta web</td><td>Recordar si has aceptado o rechazado la analítica.</td><td>24 meses</td><td>No: es técnica y necesaria para respetar tu elección</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h2>Para qué se usa la analítica</h2>
+    <p>Solo para elaborar estadísticas agregadas de uso: número de visitas, páginas consultadas, duración de la visita, tipo de dispositivo y ubicación aproximada por ciudad. Con esa información mejoramos los contenidos de la web. No se usan con fines publicitarios ni para elaborar perfiles, y Google Analytics no almacena tu dirección IP.</p>
+    <h2>Quién recibe los datos</h2>
+    <p>Google Ireland Limited (Gordon House, Barrow Street, Dublín 4, Irlanda), como encargado del tratamiento. Los datos pueden transferirse a Google LLC, en Estados Unidos, entidad adherida al Marco de Privacidad de Datos UE-EE. UU., amparado por la Decisión de adecuación de la Comisión Europea de 10 de julio de 2023. Más información en la política de privacidad de Google: <a href="https://policies.google.com/privacy?hl=es" rel="noopener">policies.google.com/privacy</a>.</p>
+    <h2>Cómo aceptar, rechazar o retirar tu consentimiento</h2>
+    <p>Al entrar por primera vez verás un aviso con dos botones del mismo tamaño: «Rechazar» y «Aceptar». Puedes cambiar de opinión cuando quieras con el botón «Configurar cookies» que hay al pie de todas las páginas: retirar el consentimiento es tan sencillo como darlo y, si lo retiras, las cookies de Google Analytics se borran de tu navegador. Tu elección se recuerda durante 24 meses; pasado ese plazo, volveremos a preguntarte.</p>
+    <h2>El mapa de Google de la página de contacto</h2>
+    <p>En la página de contacto tienes disponible el botón «Ver mapa de cómo llegar». Únicamente si pulsas dicho botón por iniciativa propia, el navegador conectará con Google Maps para mostrar el plano del barrio del Zaidín (Granada), momento en el que Google puede instalar sus propias cookies técnicas y de preferencias conforme a su política de privacidad. Si no pulsas el botón, no se realiza ninguna conexión con Google Maps.</p>
+    <h2>Cómo gestionar o eliminar las cookies desde el navegador</h2>
+    <p>También puedes borrar o bloquear las cookies en cualquier momento desde las opciones de configuración y privacidad de tu navegador (Google Chrome, Mozilla Firefox, Apple Safari o Microsoft Edge). Bloquear las cookies no impide navegar ni consultar ninguno de los contenidos de esta web.</p>
+    <p class="legal__fecha">Última actualización: 1 de noviembre de 2026.</p>
+  </div>
+</section>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__rejilla">
+      <div>
+        <h3>Felisa Herrera Talavera</h3>
+        <address>
+          Calle Torre de Machuca, 4, Bajo 1<br>18007 Granada (Zaidín)<br>
+          <a href="tel:+34633166777">633 166 777</a><br>
+          <a href="mailto:felisahtalavera@gmail.com">felisahtalavera@gmail.com</a>
+        </address>
+      </div>
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="/asesoria-fiscal-granada.html">Asesoría fiscal</a></li>
+          <li><a href="/asesoria-contable-granada.html">Asesoría contable</a></li>
+          <li><a href="/asesoria-laboral-granada.html">Asesoría laboral</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Asesoría</h3>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/contacto.html">Contacto y cómo llegar</a></li>
+          <li><a href="https://wa.me/34633166777?text=Hola%20Felisa%2C%20busco%20asesor%C3%ADa%20para%20mi%20negocio%20en%20Granada%20y%20querr%C3%ADa%20informaci%C3%B3n." rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__legal">
+      <span>© 2026 Felisa Herrera Talavera. Asesoría fiscal, contable y laboral para autónomos en Granada.</span>
+      <ul>
+        <li><a href="/aviso-legal.html">Aviso legal</a></li>
+        <li><a href="/politica-privacidad.html">Privacidad</a></li>
+        <li><a href="/politica-cookies.html">Cookies</a></li>
+        <li><button type="button" class="pie__cookies" data-cookies-config>Configurar cookies</button></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/main.js?v=1.1"></script>
+</body>
+</html>

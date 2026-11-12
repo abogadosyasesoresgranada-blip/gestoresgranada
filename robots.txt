@@ -1,0 +1,46 @@
+# ==========================================
+# ROBOTS.TXT - gestoresgranada.com
+# Felisa Herrera Talavera · Asesoría y gestoría de autónomos en Granada
+# Estrategia: VISIBILIDAD EN BUSCADORES + RESPUESTAS DE IA
+#   - Buscadores (Google, Bing...): acceso normal.
+#   - IA que RESPONDE Y CITA (ChatGPT, Gemini, Claude, Perplexity,
+#     Meta AI, Apple, Alexa): acceso permitido. Sus citas traen visitas.
+#   - Scrapers comerciales que NI citan NI enlazan: bloqueados.
+# NOTA: robots.txt es una norma de cortesía; no protege información.
+# ==========================================
+
+# ------- Regla general (buscadores e IA que cita) -------
+User-agent: *
+Disallow:
+
+# ==========================================
+# SCRAPERS COMERCIALES SIN CITA (bloqueados)
+# CCBot (Common Crawl) se permite a propósito: alimenta modelos de IA
+# y bloquearlo resta presencia en sus respuestas.
+# ==========================================
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+# ==========================================
+# SITEMAP
+# ==========================================
+Sitemap: https://www.gestoresgranada.com/sitemap.xml
